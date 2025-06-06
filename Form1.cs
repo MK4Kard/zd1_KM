@@ -139,14 +139,14 @@ namespace zd1_2_KM
             {
                 pyaterochka.CreateProduct("Кола", 85, 1); // добавление товара 1
                 pyaterochka.CreateProduct("Сок \"Добрый\"", 100, 50); // добавление товара 2
-                playlist.AddSong("Никто", "Пар", "par.mp3");
-                panel2.Visible = false;
+                playlist.AddSong("Никто", "Пар", "par.mp3"); //добавление песни
+                panel2.Visible = false; // закрытие панели 2
 
-                Song song = playlist.CurrentSong();
+                Song song = playlist.CurrentSong(); // получение текущей песни
 
-                label15.Text = $"{song.Author} {song.Title} {song.Filename}";
+                label15.Text = $"{song.Author} {song.Title} {song.Filename}"; // изменение текста
             }
-            catch (IndexOutOfRangeException ex)
+            catch (IndexOutOfRangeException ex) // вывод ошибки
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -334,64 +334,74 @@ namespace zd1_2_KM
             }
         }
 
+        // открытие панели плейлиста
         private void OpenPlaylist(object sender, EventArgs e)
         {
-            panel2.Visible = true;
+            panel2.Visible = true; // Делаем панель плейлиста видимой
         }
 
+        // закрывает панель плейлиста
         private void OpenShop(object sender, EventArgs e)
         {
-            panel2.Visible = false;
+            panel2.Visible = false; // скрытие панели плейлиста
         }
 
-        //3
-
-        private void InitializeDataGridViewPlaylist() // настройка DataGridView
+        // инициализация DataGridView для отображения плейлиста
+        private void InitializeDataGridViewPlaylist()
         {
-            dataGridView2.ColumnCount = 3; // установка количества колонок
+            dataGridView2.ColumnCount = 3; // установление 3 колонки
             dataGridView2.Columns[0].Name = "Автор"; // название первой колонки
             dataGridView2.Columns[1].Name = "Название"; // название второй колонки
             dataGridView2.Columns[2].Name = "Название файла"; // название третьей колонки
-            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // установление авторазмера для таблицы
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // автоматическое растягивание колонок
         }
 
-        public void CompletionDGVPlaylist() // заполнение DataGridView плейлиста данными
+        // заполнение DataGridView данными из плейлиста
+        public void CompletionDGVPlaylist()
         {
-            dataGridView2.Rows.Clear(); // очистка таблицы
+            dataGridView2.Rows.Clear(); // очищение всех строк в таблице
 
-            song_text = playlist.WriteAllSongs(); // получение списка песен
+            // получение списка всех песен в текстовом формате
+            song_text = playlist.WriteAllSongs();
 
-            foreach (var songs in song_text) // обработка каждой песни
+            // добавление каждой песни в таблицу
+            foreach (var songs in song_text)
             {
-                string[] parts = songs.Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries); // разделение информации о песне на части
+                // разбиение строки с информацией о песне на части (автор, название, файл)
+                string[] parts = songs.Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
 
-                dataGridView2.Rows.Add(parts[0], parts[1], parts[2]); // добавление данных в строку
+                // добавляем новой строки в таблицу с данными о песне
+                dataGridView2.Rows.Add(parts[0], parts[1], parts[2]);
             }
         }
 
+        // обработчик загрузки плейлиста в DataGridView
         private void LoadPlaylistDGV(object sender, EventArgs e)
         {
-            CompletionDGVPlaylist();
+            CompletionDGVPlaylist(); // заполнение таблицы
         }
 
+        // добавление новой песни в плейлист
         private void Add_Song(object sender, EventArgs e)
         {
-            string author = textBox7.Text.Trim(); // получение имени автора
+            // получение данных из текстовых полей
+            string author = textBox7.Text.Trim(); // Автор
+            string title = textBox8.Text.Trim(); // Название песни
+            string filename = textBox9.Text.Trim(); // Имя файла
 
-            string title = textBox8.Text.Trim(); // получение названия песни
-
-            string filename = textBox9.Text.Trim(); // получение названия файла
-            if (string.IsNullOrEmpty(filename)) // проверка на пустую ошибку
+            // проверка, что указано имя файла
+            if (string.IsNullOrEmpty(filename))
             {
-                // вывод предупреждения
                 MessageBox.Show("Введите название файла.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // возвращение к заполнению
+                return;
             }
 
             try
             {
+                // если указаны и автор, и название
                 if (!string.IsNullOrEmpty(author) && !string.IsNullOrEmpty(title))
                 {
+                    // создание нового объекта песни
                     Song song = new Song
                     {
                         Author = author,
@@ -399,170 +409,192 @@ namespace zd1_2_KM
                         Filename = filename
                     };
 
-                    playlist.AddSong(song); // создание песни
+                    // добавление песни в плейлист
+                    playlist.AddSong(song);
                     CompletionDGVPlaylist(); // обновление таблицы
                 }
-                else
+                else // если указано только имя файла
                 {
-                    playlist.AddSong(filename); // создание песни
+                    playlist.AddSong(filename); // добавление песни только с именем файла
                     CompletionDGVPlaylist(); // обновление таблицы
                 }
 
-                // очистка полей ввода
+                // очищение полей ввода
                 textBox7.Clear();
                 textBox8.Clear();
                 textBox9.Clear();
-
             }
-            catch (Exception ex)
+            catch (Exception ex) // вывод ошибки
             {
-                // вывод об ошибке при заполнении
                 MessageBox.Show($"Произошла ошибка: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        // переход к следующей песне в плейлисте
         private void Next(object sender, EventArgs e)
         {
             try
             {
-                Song song = new Song();
-                song = playlist.NextSong();
+                // получение следующей песни
+                Song song = playlist.NextSong();
+
+                // отображение информации о песне
                 label15.Text = $"{song.Author} {song.Title} {song.Filename}";
 
+                // сбрасывание подсветки всех строк
                 foreach (DataGridViewRow row in dataGridView2.Rows)
                 {
                     row.DefaultCellStyle.BackColor = SystemColors.Window;
                 }
 
+                // получение текущего индекса
                 int index = playlist.CurrentIndex();
 
+                // подсвечивание текущей песни
                 if (index >= 0 && index < dataGridView2.Rows.Count)
                 {
                     dataGridView2.Rows[index].DefaultCellStyle.BackColor = Color.LightBlue;
                 }
 
+                // прокручивание таблицы к текущей песне
                 dataGridView2.FirstDisplayedScrollingRowIndex = index;
             }
-            catch (IndexOutOfRangeException ex)
+            catch (IndexOutOfRangeException ex) // вывод ошибки
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        // переход к предыдущей песне в плейлисте
         private void Previous(object sender, EventArgs e)
         {
             try
             {
-                Song song = new Song();
-                song = playlist.PreviousSong();
+                // получение предыдущей песни
+                Song song = playlist.PreviousSong();
                 label15.Text = $"{song.Author} {song.Title} {song.Filename}";
 
+                // сбрасывание подсветки всех строк
                 foreach (DataGridViewRow row in dataGridView2.Rows)
                 {
                     row.DefaultCellStyle.BackColor = SystemColors.Window;
                 }
 
+                // получение текущего индекса
                 int index = playlist.CurrentIndex();
 
+                // подсвечивание текущей песни
                 if (index >= 0 && index < dataGridView2.Rows.Count)
                 {
                     dataGridView2.Rows[index].DefaultCellStyle.BackColor = Color.LightBlue;
                 }
 
+                // прокручивание таблицы к текущей песне
                 dataGridView2.FirstDisplayedScrollingRowIndex = index;
             }
-            catch (IndexOutOfRangeException ex)
+            catch (IndexOutOfRangeException ex) // вывод ошибки
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        // поиск песни по индексу
         private void SearchSong(object sender, EventArgs e)
         {
             try
             {
+                // сбрасывание подсветки всех строк
                 foreach (DataGridViewRow row in dataGridView2.Rows)
                 {
                     row.DefaultCellStyle.BackColor = SystemColors.Window;
                 }
 
+                // получение индекса из NumericUpDown
                 int index = (int)numericUpDown2.Value;
 
+                // получаем песни по индексу
                 Song song = playlist.IndexSong(index);
                 label15.Text = $"{song.Author} {song.Title} {song.Filename}";
 
+                // подсвечивание найденной песни
                 if (index >= 0 && index < dataGridView2.Rows.Count)
                 {
                     dataGridView2.Rows[index].DefaultCellStyle.BackColor = Color.LightBlue;
                 }
             }
-            catch (IndexOutOfRangeException ex)
+            catch (IndexOutOfRangeException ex) // вывод ошибки
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        // начало воспроизведения плейлиста (первая песня)
         private void StartPlayList(object sender, EventArgs e)
         {
             try
             {
+                // сбрасывание подсветки всех строк
                 foreach (DataGridViewRow row in dataGridView2.Rows)
                 {
                     row.DefaultCellStyle.BackColor = SystemColors.Window;
                 }
 
-                int index = (int)numericUpDown2.Value;
-
+                // получение первой песни
                 Song song = playlist.StartPlaylist();
+                int index = playlist.CurrentIndex();
                 label15.Text = $"{song.Author} {song.Title} {song.Filename}";
 
+                // подсвечивание первой песни
                 if (index >= 0 && index < dataGridView2.Rows.Count)
                 {
                     dataGridView2.Rows[index].DefaultCellStyle.BackColor = Color.LightBlue;
                 }
             }
-            catch (IndexOutOfRangeException ex)
+            catch (IndexOutOfRangeException ex) // вывод ошибки
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        // очистка всего плейлиста
         private void ClearPlaylist(object sender, EventArgs e)
         {
-            playlist.ClearPlaylist();
-            CompletionDGVPlaylist();
-            label15.Text = "";
+            playlist.ClearPlaylist(); // очистка плейлиста
+            CompletionDGVPlaylist(); // обновление таблицы
+            label15.Text = ""; // очистка метки с текущей песней
         }
 
+        // удаление песни из плейлиста
         private void Delete(object sender, EventArgs e)
         {
             try
             {
+                // получение текста для удаления
                 string del_text = textBox10.Text;
 
+                // получение выбранного способа удаления
                 int choice = comboBox1.SelectedIndex;
 
                 if (choice >= 0)
                 {
                     switch (choice)
                     {
-                        case 0:
+                        case 0: // удаление по имени файла
                             playlist.DeleteSong(del_text);
                             break;
-                        case 1:
+                        case 1: // удаление по индексу
                             int index;
-                            if (!int.TryParse(del_text, out index) || index <= 0) // проверка на ввод строки с числом
+                            if (!int.TryParse(del_text, out index) || index <= 0)
                             {
-                                MessageBox.Show("Введите корректное число."); // вывод предупреждения
-                                return; // возвращение 
+                                MessageBox.Show("Введите корректное число.");
+                                return;
                             }
                             playlist.DeleteSong(index);
                             break;
-                        case 2:
+                        case 2: // удаление по полным данным (автор, название, файл)
                             try
                             {
-                                string[] parts = new string[3];
-                                parts = del_text.Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+                                string[] parts = del_text.Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
                                 Song song = new Song
                                 {
                                     Author = parts[0],
@@ -577,14 +609,14 @@ namespace zd1_2_KM
                             }
                             break;
                     }
-                    CompletionDGVPlaylist();
+                    CompletionDGVPlaylist(); // обновление таблицы после удаления
                 }
                 else
                 {
-                    MessageBox.Show("выберите вид удаления", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Выберите вид удаления", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (IndexOutOfRangeException ex)
+            catch (IndexOutOfRangeException ex) // вывод ошибки
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

@@ -6,22 +6,24 @@ using System.Threading.Tasks;
 
 namespace zd1_2_KM
 {
+    // класс, представляющий плейлист музыкальных композиций
     class Playlist
     {
-        private List<Song> list;
-        private int currentIndex;
+        private List<Song> list;         // список песен в плейлисте
+        private int currentIndex;        // индекс текущей воспроизводимой песни
 
+        // конструктор плейлиста
         public Playlist()
         {
-            list = new List<Song>();
-            currentIndex = 0;
+            list = new List<Song>();  // инициализация пустого списка песен
+            currentIndex = 0;         // начинаем с первого элемента
         }
 
         public Song CurrentSong()
         {
             if (list.Count > 0)
-                return list[currentIndex];
-            else
+                return list[currentIndex];  // возвращение текущей песни
+            else // создание исключения
                 throw new IndexOutOfRangeException("Невозможно получить текущую аудиозапись для пустого плейлиста!");
         }
 
@@ -37,75 +39,96 @@ namespace zd1_2_KM
             return songs; // возвращение списка песен
         }
 
+        // добавление песни с указанием автора, названия и файла
         public void AddSong(string author, string title, string filename)
         {
-            Song song = new Song();
+            Song song = new Song(); // создание объекта
             song.Author = author;
             song.Title = title;
             song.Filename = filename;
 
-            list.Add(song);
+            // проверка, нет ли уже такой песни в плейлисте
+            if (!list.Contains(song))
+                list.Add(song);  // добавление, если песни нет
+            else
+                throw new Exception("Песня уже есть в плейлисте");  // иначе выбрасываем исключение
         }
 
+        // добавление готового объекта Song
         public void AddSong(Song song)
         {
-            list.Add(song);
+            if (!list.Contains(song))
+                list.Add(song);  // добавление, если песни нет
+            else // создание исключения
+                throw new Exception("Песня уже есть в плейлисте");
         }
 
+        // добавление песни только по имени файла
         public void AddSong(string filename)
         {
-            int index = filename.IndexOf('.');
+            int index = filename.IndexOf('.');  // поиск точки в имени файла
 
-            if (index >= 0)
+            if (index >= 0)  // если точка найдена
             {
-
-                Song song = new Song();
-                song.Author = "Неизвестный";
-                song.Title = filename.Remove(index);
+                Song song = new Song(); // создание объекта
+                song.Author = "Неизвестный";  // автор по умолчанию
+                song.Title = filename.Remove(index);  // название = имя файла без расширения
                 song.Filename = filename;
 
-                list.Add(song);
+                if (!list.Contains(song))
+                    list.Add(song);  // добавление, если песни нет
+                else // создание исключения
+                    throw new Exception("Песня уже есть в плейлисте");
             }
         }
 
+        // переход к следующей песне
         public Song NextSong()
         {
-            if (list.Count > 0)
+            if (list.Count > 0)  // если плейлист не пустой
             {
-                currentIndex++;
+                currentIndex++;  // увеличивание индекса
 
-                if (currentIndex >= list.Count)
+                if (currentIndex >= list.Count)  // проверка выхода за границы
                 {
+                    // создание исключения
                     throw new IndexOutOfRangeException("Невозможно выйти за пределы плейлиста");
                 }
                 else
-                    return list[currentIndex];
+                    return list[currentIndex];  // возвращение следующей песни
             }
-            else throw new IndexOutOfRangeException("Список пустой");
+            else // создание исключения
+                throw new IndexOutOfRangeException("Список пустой");
         }
 
+        // переход к предыдущей песне
         public Song PreviousSong()
         {
-            if (list.Count > 0)
+            if (list.Count > 0)  // если плейлист не пустой
             {
-                currentIndex--;
+                currentIndex--;  // уменьшение индекса
 
-                if (currentIndex < 0)
+                if (currentIndex < 0)  // проверка выходы за границы
                 {
+                    // создание исключения
                     throw new IndexOutOfRangeException("Невозможно выйти за пределы плейлиста");
                 }
                 else
-                    return list[currentIndex];
+                    return list[currentIndex];  // возвращение предыдущей песни
             }
-            else throw new IndexOutOfRangeException("Список пустой");
+            else // создание исключения
+                throw new IndexOutOfRangeException("Список пустой");
         }
 
+        // получение песни по индексу
         public Song IndexSong(int index)
         {
-            if (list.Count > 0)
+            if (list.Count > 0)  // если плейлист не пустой
             {
+                // проверка корректности индекса
                 if (index < 0)
                 {
+                    // создание исключения
                     throw new IndexOutOfRangeException("Индекс не может быть отрицательным");
                 }
                 if (index >= list.Count)
@@ -113,56 +136,66 @@ namespace zd1_2_KM
                     throw new IndexOutOfRangeException("Индекс выходить за границы");
                 }
 
-                currentIndex = index;
-                return list[currentIndex];
+                currentIndex = index;  // установление текущего индекса
+                return list[currentIndex];  // возвращени песни
             }
-            else throw new IndexOutOfRangeException("Список пустой");
+            else // создание исключения
+                throw new IndexOutOfRangeException("Список пустой");
         }
 
+        // начало воспроизведения плейлиста (первая песня)
         public Song StartPlaylist()
         {
-            if (list.Count > 0)
+            if (list.Count > 0)  // если плейлист не пустой
             {
-                currentIndex = 0;
-                return list[currentIndex];
+                currentIndex = 0;  // сбрасывание индекса на начало
+                return list[currentIndex];  // возвращение первой песни
             }
-            else throw new IndexOutOfRangeException("Список пустой");
+            else // создание исключения
+                throw new IndexOutOfRangeException("Список пустой");
         }
 
+        // удаление песни по имени файла
         public void DeleteSong(string file)
         {
-            Song song = new Song();
-
+            // удаление всеъ песен с указанным именем файла
             list.RemoveAll(song => song.Filename == file);
         }
 
+        // удаление песни по индексу
         public void DeleteSong(int index)
         {
+            // проверка корректности индекса
             if (index < 0)
             {
+                // создание исключения
                 throw new IndexOutOfRangeException("Индекс не может быть отрицательным");
             }
             if (index >= list.Count)
             {
+                // создание исключения
                 throw new IndexOutOfRangeException("Индекс выходить за границы");
             }
             else
-                list.RemoveAt(index);
+                list.RemoveAt(index);  // удаление песни по индексу
         }
 
+        // удаление конкретной песни
         public void DeleteSong(Song song)
         {
-            list.Remove(song);
+            list.Remove(song);  // удаление указанной песни
         }
 
+        // очистка всего плейлиста
         public void ClearPlaylist()
         {
-            list.Clear();
+            list.Clear();  // удаление всех песен
         }
 
+        // получение текущего индекса
         public int CurrentIndex()
         {
-            return currentIndex;
+            return currentIndex;  // возвращение индекса текущей песни
         }
     }
 }

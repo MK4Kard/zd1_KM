@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace zd1_2_KM
 {
-    struct Song
+    // Структура, представляющая музыкальную композицию
+    public struct Song
     {
-        public string Author;
-        public string Title;
-        public string Filename;
+        public string Author;    // Автор/исполнитель песни
+        public string Title;     // Название песни
+        public string Filename;  // Имя файла с песней
     }
 }

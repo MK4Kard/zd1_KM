@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_2_KM\\",
+  "WorkspaceRootPath": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_KM-master\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0724D9A7-7130-4DB0-8EB2-15C43DBA0117}|zd1_2_KM.csproj|c:\\users\\dns\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0434\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_2_km\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0724D9A7-7130-4DB0-8EB2-15C43DBA0117}|zd1_2_KM.csproj|solutionrelative:product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0724D9A7-7130-4DB0-8EB2-15C43DBA0117}|zd1_2_KM.csproj|c:\\users\\dns\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0434\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_km-master\\playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0724D9A7-7130-4DB0-8EB2-15C43DBA0117}|zd1_2_KM.csproj|solutionrelative:playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0724D9A7-7130-4DB0-8EB2-15C43DBA0117}|zd1_2_KM.csproj|c:\\users\\dns\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0434\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_2_km\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0724D9A7-7130-4DB0-8EB2-15C43DBA0117}|zd1_2_KM.csproj|solutionrelative:shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0724D9A7-7130-4DB0-8EB2-15C43DBA0117}|zd1_2_KM.csproj|c:\\users\\dns\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0434\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_km-master\\song.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0724D9A7-7130-4DB0-8EB2-15C43DBA0117}|zd1_2_KM.csproj|solutionrelative:song.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0724D9A7-7130-4DB0-8EB2-15C43DBA0117}|zd1_2_KM.csproj|c:\\users\\dns\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0434\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_2_km\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0724D9A7-7130-4DB0-8EB2-15C43DBA0117}|zd1_2_KM.csproj|c:\\users\\dns\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0434\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_km-master\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0724D9A7-7130-4DB0-8EB2-15C43DBA0117}|zd1_2_KM.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0724D9A7-7130-4DB0-8EB2-15C43DBA0117}|zd1_2_KM.csproj|C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_2_KM\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0724D9A7-7130-4DB0-8EB2-15C43DBA0117}|zd1_2_KM.csproj|C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_KM-master\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0724D9A7-7130-4DB0-8EB2-15C43DBA0117}|zd1_2_KM.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -26,55 +26,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "DocumentMoniker": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_2_KM\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_2_KM\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "RelativeToolTip": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentIndex": 0,
+              "Title": "Playlist.cs",
+              "DocumentMoniker": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_KM-master\\Playlist.cs",
+              "RelativeDocumentMoniker": "Playlist.cs",
+              "ToolTip": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_KM-master\\Playlist.cs",
+              "RelativeToolTip": "Playlist.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAuwMUAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T16:00:59.55Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+              "WhenOpened": "2025-06-06T13:43:36.856Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Shop.cs",
-              "DocumentMoniker": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_2_KM\\Shop.cs",
-              "RelativeDocumentMoniker": "Shop.cs",
-              "ToolTip": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_2_KM\\Shop.cs",
-              "RelativeToolTip": "Shop.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAmwHoAAAAYAAAAAAAAAA==",
+              "Title": "Song.cs",
+              "DocumentMoniker": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_KM-master\\Song.cs",
+              "RelativeDocumentMoniker": "Song.cs",
+              "ToolTip": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_KM-master\\Song.cs",
+              "RelativeToolTip": "Song.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T15:57:59.931Z",
+              "WhenOpened": "2025-06-06T13:43:07.657Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_2_KM\\Product.cs",
-              "RelativeDocumentMoniker": "Product.cs",
-              "ToolTip": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_2_KM\\Product.cs",
-              "RelativeToolTip": "Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_KM-master\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_KM-master\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T15:57:58.159Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T16:00:59.55Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_2_KM\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_KM-master\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_2_KM\\Form1.cs",
+              "ToolTip": "C:\\Users\\DNS\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0414\u043E\u0434\u0435\u043B\u044B\u0432\u0430\u0442\u044C\\zd1_KM-master\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAACMBAAAAAAAAAAAAADoBAABVAAAAAAAAAA==",
+              "ViewState": "AgIAAEsCAAAAAAAAAAAkwGMCAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-03T15:49:07.936Z",
               "EditorCaption": ""
